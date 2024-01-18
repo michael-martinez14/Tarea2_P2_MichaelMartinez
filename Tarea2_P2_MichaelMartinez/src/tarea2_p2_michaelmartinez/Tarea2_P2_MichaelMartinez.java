@@ -24,8 +24,8 @@ public class Tarea2_P2_MichaelMartinez {
             System.out.println("1. Binario ");
             System.out.println("2. Sumatoria");
             System.out.println("3. Factorial");
-            System.out.println("4. ");
-            System.out.println("5. ");
+            System.out.println("4. Algoritmo de Euclides");
+            System.out.println("5. Invertir número");
             System.out.println("6. Salir");
             System.out.print("Ingrese el método a utilizar: ");
             opcionMenu=entrada.nextInt();
@@ -50,6 +50,12 @@ public class Tarea2_P2_MichaelMartinez {
                     
                     break;
                 case 4:
+                    System.out.print("Ingrese el primer número: ");
+                    int a=entrada.nextInt();
+                    System.out.print("Ingrese el segundo número: ");
+                    int b=entrada.nextInt();
+                    int MCD=MCD(a,b);
+                    System.out.println(MCD);
                     
                     break;
                 case 5:
@@ -118,5 +124,13 @@ public class Tarea2_P2_MichaelMartinez {
                
                 
        return nuevaCadena; 
+    }
+    
+    public static int MCD(int a, int b){
+        if (b==0) {
+            return a;
+        }else{
+           return MCD(b,a%b);
+        }
     }
 }
